@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="main-heading">🎶 Music Player 🎶</h1>
+    <div class="player">
+        <h2 id="title">Song Name - Movie Name</h2>
+        <div id="music-info">
+            <img id="cover" src="cover1.jpg" alt="Album Cover">
+        </div>
+        <audio id="audio"></audio>
+        <div class="controls">
+            <button id="prev" onclick="prevSong()">⏮️</button>
+            <button id="play" onclick="playPauseSong()">▶️</button>
+            <button id="next" onclick="nextSong()">⏭️</button>
+        </div>
+        <input type="range" id="progress" value="0" max="100">
+        <div class="volume-container">
+            <input type="range" id="volume" value="50" max="100" onchange="setVolume(this.value)">
+            <span id="volume-display">Volume: 50%</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
